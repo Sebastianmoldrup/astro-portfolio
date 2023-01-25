@@ -13,17 +13,10 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v3
 
-      # Not using npm? Change `npm ci` to `yarn install` or `pnpm i`
-      - name: Install dependencies
-        run: npm ci
-
-      # Not using npm? Change `npm run build` to `yarn build` or `pnpm run build`
-      - name: Build Astro
-        run: npm run build
+      # TODO: add a build step here
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: my-deno-project # TODO: replace with Deno Deploy project name
-          entrypoint: server/entry.mjs
-          root: dist
+          project: "sebastianmoldrup"
+          entrypoint: "./main.ts" # TODO: update entrypoint
