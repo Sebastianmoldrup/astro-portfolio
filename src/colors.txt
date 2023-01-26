@@ -1,0 +1,4 @@
+Black #101115
+Green #34e4b1
+red   #de2d2d
+blue  #004eff
