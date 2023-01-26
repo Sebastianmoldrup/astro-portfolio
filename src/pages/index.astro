@@ -1,8 +1,22 @@
 ---
+/* Components*/
 import Layout from '../layouts/Layout.astro';
+
+/* Images */
+import pfp from '../images/pfp.webp'
+
+/* Font */
+import "@fontsource/catamaran"
+import "@fontsource/poly"
+import "@fontsource/istok-web"
 ---
 
 <Layout>
-	<div></div>
+	<!-- Hero section -->
+	<div class="text-white">
+		<img src={pfp} alt="picture of the developer" class="object-fit w-[100px]" />
+		<h1>Sebastian Møldrup</h1>
+		<div>IKT-Utvikler</div>
+	</div>
 </Layout>
 
