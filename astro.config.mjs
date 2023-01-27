@@ -10,8 +10,11 @@ import deno from "@astrojs/deno";
 import preact from "@astrojs/preact";
 
 // https://astro.build/config
+import mdx from "@astrojs/mdx";
+
+// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), preact()],
+  integrations: [tailwind(), preact(), mdx()],
   output: "server",
   adapter: deno()
 });

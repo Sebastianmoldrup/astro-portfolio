@@ -1,12 +1,14 @@
 ---
-import Header from '../components/Header.jsx';
+import Header from '../components/Header.astro';
 
 import "@fontsource/catamaran"
 import "@fontsource/poly"
 import "@fontsource/istok-web"
+
+import type { CollectionEntry } from 'astro:content';
+
+type Props = CollectionEntry<'blog'>['data'];
 ---
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,9 +21,8 @@ import "@fontsource/istok-web"
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Sebastian Møldrup</title>
   </head>
-  <body class="bg-[#101115]">
+  <body class="bg-[#101115] text-[#34e4b1] w-screen h-screen">
     <Header />
     <slot />
   </body>
 </html>
-

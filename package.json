@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astrojs/deno": "^4.0.0",
+    "@astrojs/mdx": "^0.15.1",
     "@astrojs/preact": "^2.0.0",
     "@astrojs/tailwind": "^3.0.0",
     "@fontsource/catamaran": "^4.5.10",
