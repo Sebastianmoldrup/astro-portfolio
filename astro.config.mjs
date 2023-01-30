@@ -4,17 +4,17 @@ import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
-import deno from "@astrojs/deno";
-
-// https://astro.build/config
 import preact from "@astrojs/preact";
 
 // https://astro.build/config
 import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
+import vercel from "@astrojs/vercel/serverless";
+
+// https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), preact(), mdx()],
   output: "server",
-  adapter: deno()
+  adapter: vercel()
 });
