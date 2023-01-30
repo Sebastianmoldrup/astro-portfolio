@@ -13,6 +13,8 @@ import mdx from "@astrojs/mdx";
 import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
+
+// https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), preact(), mdx()],
   output: "server",

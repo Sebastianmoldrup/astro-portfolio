@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Landing from '../components/Landing.astro';
 
+import { Overlay } from '../components/header/Burger.jsx';
+
 /* Font */
 import "@fontsource/catamaran"
 import "@fontsource/poly"
@@ -10,6 +12,9 @@ import "@fontsource/istok-web"
 
 <Layout>
 	<Landing />
+
+	{/* Nav - mobile */}
+    <Overlay client:load />
 </Layout>
 
 
