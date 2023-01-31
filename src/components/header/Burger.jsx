@@ -34,8 +34,8 @@ export function Overlay() {
     const val = state.value ? "block" : "hidden";
 
     return (
-        <div class={"fixed top-14 left-0 grid place-items-center w-screen h-screen p-0 m-0 bg-[#101115] text-[#34e4b1] lg:hidden " + val}>
-            <nav class={"flex flex-col text-center text-2xl gap-5"}>
+        <div class={"fixed left-0 grid place-items-center w-screen h-full p-0 m-0 top-14 bg-[#101115] text-[#34e4b1] lg:hidden " + val}>
+            <nav class={"flex flex-col text-center text-2xl gap-5 mb-5"}>
                 { mdx.sort( (a, b) => {
                     return (a.data.position || 0) - (b.data.position || 0);
                 }).map( (entry) => {
