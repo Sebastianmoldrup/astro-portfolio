@@ -1,7 +1,7 @@
 ---
-import { Burger } from './header/Burger.jsx';
-import { Overlay } from '../components/header/Burger.jsx';
-import Nav from './header/Nav.astro';
+import { Menu } from './header/NavMobile.jsx';
+import { Overlay } from '../components/header/NavMobile.jsx';
+import Nav from './header/NavDesktop.astro';
 
 
 import "@fontsource/catamaran"
@@ -17,10 +17,10 @@ import { log } from 'astro/dist/core/logger/core';
     <Nav />
 
     {/* Nav - mobile */}
-    <Overlay client:load />
+    <Menu client:load />
 
-    {/* Burger menu */}
-    <Burger client:load />
+    {/* Nav - mobile - overlay */}
+    <Overlay client:load />
 
 </div>
     
