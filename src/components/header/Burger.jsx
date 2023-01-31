@@ -1,10 +1,10 @@
 import { signal } from "@preact/signals";
+import { getCollection } from 'astro:content';
+const mdx = await getCollection('blog');
 
 const state = signal(0);
 
 export function Burger() {
-
-    console.log(state.value);
 
     return (
         <div class="flex lg:hidden justify-center items-center p-0 m-0 cursor-pointer" onClick={() => state.value ? state.value-- : state.value++}>
@@ -25,7 +25,6 @@ export function Burger() {
                 >
                 </svg>
             </a>
-    
         </div>
     );
 }
@@ -37,10 +36,11 @@ export function Overlay() {
     return (
         <div class={"fixed top-14 left-0 grid place-items-center w-screen h-screen p-0 m-0 bg-[#101115] text-[#34e4b1] lg:hidden " + val}>
             <nav class={"flex flex-col text-center text-2xl gap-5"}>
-                <a href="">Hjem</a>
-                <a href="">Prosjekter</a>
-                <a href="">Om meg</a>
-                <a href="">Kontakt</a>
+                { mdx.sort( (a, b) => {
+                    return (a.data.position || 0) - (b.data.position || 0);
+                }).map( (entry) => {
+                    return <a href={entry.slug}>{entry.data.title}</a> 
+                } )}
             </nav>
         </div>
     );

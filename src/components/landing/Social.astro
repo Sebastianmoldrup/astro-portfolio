@@ -1,13 +1,11 @@
 ---
 /* SVG */
-import { Github } from '../../images/icons/Icon.jsx';
-import { Mail } from '../../images/icons/Icon.jsx';
-import { Phone } from '../../images/icons/Icon.jsx';
-import { In } from '../../images/icons/Icon.jsx'
+import { Github, Mail, Phone, In } from '../../images/icons/Icon.jsx';
 
 /* Sub components */
 import List from './social/List.astro';
 import Anchor from './social/Anchor.astro';
+import Brand from './social/Brand.astro';
 
 /* Font */
 import "@fontsource/istok-web"
@@ -16,32 +14,32 @@ import "@fontsource/istok-web"
 
 
 <div class="grid row-start-3 items-end justify-self-center lg:justify-self-start lg:pl-5 pb-5 col-start-1 w-fit">
-	<ul class="grid grid-flow-col justify-self-center w-fit m-0 p-0">
+	<ul class="grid grid-flow-col justify-self-center w-fit m-0 p-0 gap-6">
 		<List>
 			<Anchor href="https://github.com/Sebastianmoldrup?tab=repositories">
 				<Github />
-				<div>Github</div>
+				<Brand>Github</Brand>
 			</Anchor>
 		</List>
 
 		<List>
 			<Anchor href="mailto: sebastian.moldrup@gmail.com">
 				<Mail />
-				<div>E-mail</div>
+				<Brand>E-mail</Brand>
 			</Anchor>
 		</List>
 
 		<List>
 			<Anchor href="tel:+4741391174"> 
 				<Phone />
-				<div>Telefon</div>
+				<Brand>Telefon</Brand>
 			</Anchor>
 		</List>
 
 		<List>
 			<Anchor href="https://www.linkedin.com/in/sebastianmoldrup/">
 				<In />
-				<div>LinkedIn</div>
+				<Brand>LinkedIn</Brand>
 			</Anchor>
 		</List>
 	</ul>

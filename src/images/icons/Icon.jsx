@@ -59,3 +59,18 @@ export function In() {
 
     );
 }
+
+export function Person() {
+    return (
+        <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="70px" 
+            height="70px" 
+            viewBox="0 0 24 24"
+            class="md:h-[100px] md:w-[100px] lg:h-[200px] lg:w-[200px]">
+        <path 
+            fill="#34e4b1"
+            d="M4 6H2v14a2 2 0 0 0 2 2h14v-2H4V6m16-4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h12m-3 5a3 3 0 0 0-3-3a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3m-9 8v1h12v-1c0-2-4-3.1-6-3.1S8 13 8 15Z"/>
+        </svg>
+    );
+}
